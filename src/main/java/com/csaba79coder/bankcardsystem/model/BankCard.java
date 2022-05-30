@@ -23,4 +23,7 @@ public class BankCard {
     private TypeOfBankCard type;
 
     private String secretCode;
+
+    @ManyToOne
+    private Client client;
 }
