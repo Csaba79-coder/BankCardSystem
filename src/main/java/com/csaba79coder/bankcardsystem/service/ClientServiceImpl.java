@@ -24,12 +24,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Long findById(Client client) {
+    public Client findByName(String name) {
         List<Client> clients = clientRepository.findAll();
         if (!clients.isEmpty()) {
-            for (Client value : clients) {
-                if (value.getName().equals(client.getName())) {
-                    return value.getId();
+            for (Client client : clients) {
+                if (client.getName().equals(name)) {
+                    return client;
                 }
             }
         }

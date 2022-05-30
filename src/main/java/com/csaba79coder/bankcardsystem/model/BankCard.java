@@ -37,8 +37,8 @@ public class BankCard {
         this.bankCardNumber = generateBankCardNumber();
         this.type = generateType(bankCardNumber);
         this.maskedBankCardNumber = maskingBankCarNumber();
-        this.cvcCode = generateSecretCode();
-        this.pinCode = generateSecretCode();
+        this.cvcCode = generateCVC();
+        this.pinCode = generateFourDigitNumber();
         this.client = client;
     }
 
@@ -46,8 +46,12 @@ public class BankCard {
         return bankCardNumber.replaceAll("\\b(\\d{4})(\\d{8})(\\d{4})", "$1XXXXXXXX$3");
     }
 
-    private String generateSecretCode () {
+    private String generateFourDigitNumber() {
         return String.format("%04d", new Random().nextInt(10000));
+    }
+
+    private String generateCVC() {
+        return String.format("%03d", new Random().nextInt(1000));
     }
 
     private TypeOfBankCard generateType(String bankCardNumber) {
@@ -65,7 +69,7 @@ public class BankCard {
     private String generateBankCardNumber()  {
         StringBuilder bankCardNumber = new StringBuilder("5440");
         for (int i = 0; i < 3; i++) {
-            bankCardNumber.append("").append(generateSecretCode());
+            bankCardNumber.append("").append(generateFourDigitNumber());
         }
         return String.valueOf(bankCardNumber);
     }

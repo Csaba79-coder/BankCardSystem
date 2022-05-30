@@ -8,5 +8,5 @@ import java.util.List;
 @Service
 public interface ClientService {
     List<Client> findAllClients();
-    Long findById(Client client);
+    Client findByName(String name);
 }
