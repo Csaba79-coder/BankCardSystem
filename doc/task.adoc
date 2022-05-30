@@ -1,0 +1,25 @@
+= Good to know:
+
+@UpdateTimestamp as follows:
+
+https://stackoverflow.com/questions/69470003/creation-date-is-set-as-null-by-hibernate-when-changes-are-made-during-persist
+
+'''
+
+Join column and mapped by (fetch type EAGER or LAZY):
+
+https://www.baeldung.com/jpa-joincolumn-vs-mappedby
+
+'''
+
+Foreign key 1to1:
+
+https://tenmilesquare.com/resources/software-development/spring-boot-jpa-relationship-quick-guide/
+
+'''
+
+Enum type is string to upload the exact value to the database!
+
+https://www.baeldung.com/jpa-persisting-enums-in-jpa
+
+'''
