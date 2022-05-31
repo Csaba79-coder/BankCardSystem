@@ -1,6 +1,5 @@
 package com.csaba79coder.bankcardsystem.controller;
 
-import com.csaba79coder.bankcardsystem.model.BankCard;
 import com.csaba79coder.bankcardsystem.model.Client;
 import com.csaba79coder.bankcardsystem.service.ClientService;
 import org.springframework.http.HttpStatus;
