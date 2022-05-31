@@ -1,5 +1,6 @@
 package com.csaba79coder.bankcardsystem.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -34,13 +35,14 @@ public class Client {
     private Timestamp creationTime;
 
     @OneToMany(mappedBy="client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonIgnore
     private Set<BankCard> bankCards;
 
     public Client(String email, String name, String mobile) {
         this.email = email;
         this.name = name;
         this.mobile = mobile;
-        this.creationTime = getTimeStamp();
+        // this.creationTime = getTimeStamp();
         this.bankCards= new HashSet<>();
     }
 

@@ -6,4 +6,5 @@ import org.springframework.stereotype.Controller;
 public class BankCardController {
 
 
+    // postmapping with a redirect!!!
 }

@@ -1,5 +1,7 @@
 package com.csaba79coder.bankcardsystem.model;
 
+import com.fasterxml.jackson.annotation.JacksonInject;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,18 +21,24 @@ public class BankCard {
     private Long id;
 
     @Column(unique = true)
+    @JsonIgnore
     private String bankCardNumber;
 
     private String maskedBankCardNumber;
 
     @Enumerated(EnumType.STRING)
+    @JsonIgnore
     private TypeOfBankCard type;
 
     private String cvcCode;
+    @JsonIgnore
     private String pinCode;
+
+    private String nameOfOwner;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "clients_id")
+    @JsonIgnore
     private Client client;
 
     public BankCard(Client client) {
@@ -40,6 +48,7 @@ public class BankCard {
         this.cvcCode = generateCVC();
         this.pinCode = generateFourDigitNumber();
         this.client = client;
+        this.nameOfOwner = client.getName();
     }
 
     private String maskingBankCarNumber() {

@@ -44,8 +44,22 @@ public class DataLoader implements ApplicationRunner {
                         .mobile("+36-10-647-6467")
                 .build());
 
+        Client anna_balazs = Client.builder()
+                .email("anna_balazs@gamil.com")
+                .name("Anna Balazs")
+                .mobile("+36-30-571-99-61")
+                .build();
+        clientRepository.save(anna_balazs);
+
         BankCard masterCard = new BankCard(csaba_vadasz);
         bankCardRepository.save(masterCard);
+
+        BankCard masterCard2 = new BankCard(csaba_vadasz);
+        bankCardRepository.save(masterCard2);
+
+        BankCard masterCard3 = new BankCard(anna_balazs);
+
+        bankCardRepository.save(masterCard3);
     }
 }
 

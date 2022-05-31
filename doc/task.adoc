@@ -23,3 +23,26 @@ Enum type is string to upload the exact value to the database!
 https://www.baeldung.com/jpa-persisting-enums-in-jpa
 
 '''
+
+Mapping:
+
+https://howtodoinjava.com/spring5/webmvc/controller-getmapping-postmapping/
+
+'''
+
+Space in url:
+
+https://stackoverflow.com/questions/28482801/how-to-request-json-that-have-spaces-in-url
+
+%20 works!!!
+
+image::../../urlAliasOrientation/doc/image-2022-05-31-19-49-29-387.png[]
+
+image::../../urlAliasOrientation/doc/image-2022-05-31-19-49-01-551.png[]
+
+Postman:
+
+image::../../urlAliasOrientation/doc/image-2022-05-31-19-50-04-799.png[]
+
+image::../../urlAliasOrientation/doc/image-2022-05-31-19-51-17-534.png[]
+

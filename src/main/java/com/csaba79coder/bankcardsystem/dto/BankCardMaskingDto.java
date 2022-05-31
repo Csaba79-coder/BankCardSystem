@@ -1,5 +1,6 @@
 package com.csaba79coder.bankcardsystem.dto;
 
+import com.csaba79coder.bankcardsystem.model.Client;
 import lombok.*;
 
 @Getter
@@ -11,5 +12,5 @@ public class BankCardMaskingDto {
 
     private String maskedBankCardNumber;
     private String cvcNumber;
-    private String nameOfOwner;
+    private Client client;
 }
