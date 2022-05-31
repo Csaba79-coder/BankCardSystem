@@ -33,4 +33,10 @@ public class BankCardRestController {
     public BankCard saveBankCardRestAPI() {
         return new BankCard();
     }
+
+    // TOD
+    @PatchMapping()
+    public void patch() {
+
+    }
 }
