@@ -1,0 +1,10 @@
+table, th, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+    padding: 3px;
+    width: 500px;
+}
+
+input {
+    display: block;
+}

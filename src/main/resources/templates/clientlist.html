@@ -7,5 +7,37 @@
 </head>
 <body>
 
+<div class="container">
+    <h2>Clients</h2>
+    <ul>
+        <li><a href="/">BACK</a></li>
+    </ul>
+
+    <table th:if="${list.size()} > 0" class="table table-striped">
+        <thead>
+        <tr>
+            <!-- <th>Index</th> -->
+            <th>ID</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Creation Time</th>
+        </tr>
+        </thead>
+        <tbody th:each="item, iter : ${list}" th:object="${item}">
+        <tr>
+            <!-- <td th:text="${iter.index}"></td> -->
+            <td th:text="${item.getId()}"></td>
+            <td th:text="${item.getEmail()}"></td>
+            <td th:text="${item.getName()}"></td>
+            <td th:text="${item.getMobile()}"></td>
+            <td th:text="${item.getCreationTime()}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p th:unless="${list.size() > 0}">The list is empty, there is no available client!</p>
+</div>
+
 </body>
 </html>

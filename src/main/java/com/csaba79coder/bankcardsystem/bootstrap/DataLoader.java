@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("test")
+// @Profile("test")
 public class DataLoader implements ApplicationRunner {
 
     private final ClientService clientService;

@@ -7,5 +7,37 @@
 </head>
 <body>
 
+<div class="container">
+    <h2>BankCards</h2>
+    <ul>
+        <li><a href="/">BACK</a></li>
+    </ul>
+
+    <table th:if="${list.size()} > 0" class="table table-striped">
+        <thead>
+        <tr>
+            <!-- <th>Index</th> -->
+            <th>ID</th>
+            <th>BankCard No.</th>
+            <th>CVC</th>
+            <th>Type</th>
+            <th>Bankcard holder</th>
+        </tr>
+        </thead>
+        <tbody th:each="item, iter : ${list}" th:object="${item}">
+        <tr>
+            <!-- <td th:text="${iter.index}"></td> -->
+            <td th:text="${item.getId()}"></td>
+            <td th:text="${item.getMaskedBankCardNumber()}"></td>
+            <td th:text="${item.getCvcCode()}"></td>
+            <td th:text="${item.getType()}"></td>
+            <td th:text="${item.getNameOfOwner()}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <p th:unless="${list.size() > 0}">The list is empty, there is no available client!</p>
+</div>
+
 </body>
 </html>
