@@ -62,3 +62,7 @@ Template:
 
 https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_table_striped&stacked=h
 
+Bootstrap table format:
+
+https://bootstrap-vue.org/docs/components/table
+
