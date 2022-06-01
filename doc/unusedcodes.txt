@@ -1,0 +1,35 @@
+@GetMapping()
+    public String addNewClient(@RequestParam(value = "email") String email,
+                               @RequestParam(value = "name") String name,
+                               @RequestParam(value = "mobile") String mobile,
+                               @RequestParam(value = "success") String success,
+                               @RequestParam(value = "error") String error,
+                               Model model) {
+
+        if (success.equals("success")) {
+            model.addAttribute("email", email);
+            model.addAttribute("name", name);
+            model.addAttribute("mobile", mobile);
+            model.addAttribute("success", true);
+        }
+        if (error.equals("error")) {
+            model.addAttribute("emailField", email);
+            model.addAttribute("name", name);
+            model.addAttribute("mobile", mobile);
+            model.addAttribute("error", true);
+        }
+        return "index";
+    }
+
+@PostMapping("/save-link")
+public String saveNewClient(@RequestParam("email") String email,
+                            @RequestParam("name") String name,
+                            @RequestParam("mobile") String mobile) {
+
+    Client currentClient = new Client(email, name, mobile);
+
+    if (Objects.equals(success, "success")) {
+        return "redirect:/?success&name="+name+"&email=" + email;
+    }
+    return "redirect:/?error&name="+name+"&email="+email;
+}
