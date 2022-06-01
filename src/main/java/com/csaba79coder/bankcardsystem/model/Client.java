@@ -25,7 +25,7 @@ public class Client {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    // @Column(unique = true)
     private String email;
 
     private String name;
@@ -42,7 +42,7 @@ public class Client {
         this.email = email;
         this.name = name;
         this.mobile = mobile;
-        // this.creationTime = getTimeStamp();
+        this.creationTime = getTimeStamp();
         this.bankCards= new HashSet<>();
     }
 

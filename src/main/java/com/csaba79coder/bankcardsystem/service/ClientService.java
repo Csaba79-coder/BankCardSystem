@@ -12,5 +12,7 @@ public interface ClientService {
     Client findById(Long id);
     Client saveClient(Client client);
 
+    String saveClientForm(Client client);
+
     void deleteClientById(Long id);
 }

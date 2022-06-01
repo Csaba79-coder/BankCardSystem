@@ -66,3 +66,11 @@ Bootstrap table format:
 
 https://bootstrap-vue.org/docs/components/table
 
+Bootstrap forms:
+
+https://www.w3schools.com/bootstrap4/bootstrap_forms.asp
+
+
+Login form with bootstrap (code):
+
+https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_basic&stacked=h

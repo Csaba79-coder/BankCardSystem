@@ -54,6 +54,19 @@ public class ClientServiceImpl implements ClientService {
     public Client saveClient(Client client) {
         return clientRepository.save(client);
     }
+
+    @Override
+    public String saveClientForm(Client client) {
+        String result = "";
+        List<Client> clients = clientRepository.findAll();
+        for (Client value : clients) {
+            if (value.getEmail().equals(client.getEmail())) {
+                return "error";
+            }
+        }
+        return "success";
+    }
+
     @Override
     public void deleteClientById(Long id) {
         clientRepository.deleteById(id);
