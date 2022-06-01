@@ -34,7 +34,7 @@ public class BankCardRestController {
         return new BankCard();
     }
 
-    // TOD
+    // TODO
     @PatchMapping()
     public void patch() {
 
