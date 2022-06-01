@@ -60,8 +60,10 @@ public class ClientController {
         String success = clientService.saveClientForm(currentClient);
 
         if (Objects.equals(success, "success")) {
+            // return "redirect:/?success=true&name="+name+"&email=" + email;
             return "redirect:/?success&name="+name+"&email=" + email;
         }
+        // return "redirect:/?error=true&name="+name+"&email="+email;
         return "redirect:/?error&name="+name+"&email="+email;
     }
 }
