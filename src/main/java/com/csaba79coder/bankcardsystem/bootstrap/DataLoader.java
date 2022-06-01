@@ -9,9 +9,11 @@ import com.csaba79coder.bankcardsystem.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("test")
 public class DataLoader implements ApplicationRunner {
 
     private final ClientService clientService;

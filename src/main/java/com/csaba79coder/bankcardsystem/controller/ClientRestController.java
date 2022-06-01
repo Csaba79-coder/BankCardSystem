@@ -3,6 +3,7 @@ package com.csaba79coder.bankcardsystem.controller;
 import com.csaba79coder.bankcardsystem.model.Client;
 import com.csaba79coder.bankcardsystem.service.ClientService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,14 +38,14 @@ public class ClientRestController {
         return currentClient;
     }
 
-    /*@PutMapping("/update-client/name/email/{name}")
-    public String updateClientEmailByNameOnlyEmail(@PathVariable String name, @RequestParam String email) {
+    @PutMapping(value = "/update-client/name/email/{name}", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public String updateClientEmailByNameOnlyEmail(@PathVariable String name, @RequestBody ClientDto dto) {
         String correctName = name.replace("%20", " ");
         Client currentClient = clientService.findByName(correctName);
-        currentClient.setEmail(email);
+        currentClient.setEmail(dto.getEmail());
         clientService.saveClient(currentClient);
         return currentClient.getEmail();
-    }*/
+    }
 
     // update
     @PutMapping("/update-client/{id}")
