@@ -1,4 +1,4 @@
-package com.csaba79coder.bankcardsystem.controller;
+package com.csaba79coder.bankcardsystem.dto;
 
 import lombok.*;
 

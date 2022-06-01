@@ -116,7 +116,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"email\": \"bigkiss@gmail.com\",\r\n        \"name\": \"Elizabeth Kiss\",\r\n        \"mobile\": \"+36-66-111-000\"\r\n}",
+					"raw": "{\r\n        \"email\": \"bigkiss@gmail.com\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
