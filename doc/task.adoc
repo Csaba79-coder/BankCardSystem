@@ -51,3 +51,14 @@ image::../../urlAliasOrientation/doc/image-2022-05-31-19-51-17-534.png[]
 Different of RequestParam and RequestBody
 
 RequestParam is used when I want to get an info from url! and RequestBody is used, when I want to change something in the Object from RequestBody in JSon !
+
+'''
+
+Bootstrap:
+
+https://www.w3schools.com/bootstrap4/bootstrap_tables.asp
+
+Template:
+
+https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_table_striped&stacked=h
+
