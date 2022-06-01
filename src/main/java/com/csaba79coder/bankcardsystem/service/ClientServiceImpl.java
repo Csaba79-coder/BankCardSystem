@@ -60,7 +60,7 @@ public class ClientServiceImpl implements ClientService {
         List<Client> clients = clientRepository.findAll();
         for (Client value : clients) {
             if (value.getEmail().equals(client.getEmail())) {
-                return "error";
+                return null;
             }
         }
         clientRepository.save(client);

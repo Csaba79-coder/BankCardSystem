@@ -34,7 +34,7 @@ public class DataLoader implements ApplicationRunner {
     public void run(ApplicationArguments args) throws Exception {
 
         Client csaba_vadasz = Client.builder()
-                .email("csabavadasz79@gamil.com")
+                .email("csabavadasz79@gmail.com")
                 .name("Csaba Vadasz")
                 .mobile("+36-30-235-63-04")
                 .build();
@@ -47,7 +47,7 @@ public class DataLoader implements ApplicationRunner {
                 .build());
 
         Client anna_balazs = Client.builder()
-                .email("anna_balazs@gamil.com")
+                .email("anna_balazs@gmail.com")
                 .name("Anna Balazs")
                 .mobile("+36-30-571-99-61")
                 .build();

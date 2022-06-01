@@ -24,7 +24,7 @@
 
     <h2>Add new client</h2>
 
-    <div th:if="${success}">Your clients name: <span th:text="${name}"></span> and your email: <span th:text="${email}"></span>.</div>
+    <div th:if="${success}">Your clients name: <span th:text="${name}"></span> and client's email: <span th:text="${email}"></span></div>
     <div th:if="${error}" style="color: red;">The client already exists!</div>
 
     <form action="/save-link" method="post">

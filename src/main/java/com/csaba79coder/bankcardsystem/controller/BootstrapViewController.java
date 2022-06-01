@@ -37,21 +37,21 @@ public class BootstrapViewController {
         return "cardbootstrapview";
     }
 
-    @GetMapping()
-    public String addNewClient(@RequestParam(value = "email") String email,
-                               @RequestParam(value = "name") String name,
-                               @RequestParam(value = "mobile") String mobile,
-                               @RequestParam(value = "success") String success,
-                               @RequestParam(value = "error") String error,
+    @GetMapping({"/", ""})
+    public String addNewClient(@RequestParam(value = "email", required = false) String email,
+                               @RequestParam(value = "name", required = false) String name,
+                               @RequestParam(value = "mobile", required = false) String mobile,
+                               @RequestParam(value = "success", required = false) String success,
+                               @RequestParam(value = "error", required = false) String error,
                                Model model) {
 
-        if (success.equals("success")) {
+        if (success != null) {
             model.addAttribute("email", email);
             model.addAttribute("name", name);
             model.addAttribute("mobile", mobile);
             model.addAttribute("success", true);
         }
-        if (error.equals("error")) {
+        if (error != null) {
             model.addAttribute("emailField", email);
             model.addAttribute("name", name);
             model.addAttribute("mobile", mobile);
