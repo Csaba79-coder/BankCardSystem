@@ -91,6 +91,10 @@ image::image-2022-06-02-19-05-00-918.png[]
 
 image::image-2022-06-02-19-05-44-093.png[]
 
+Missing parameter is 400 error! Do not forget to change in ResponseEntity
+
+image::image-2022-06-02-19-22-59-693.png[]
+
 '''
 
 spring-requestparam-vs-pathvariable:
