@@ -66,4 +66,20 @@ public class ClientRestController {
     private List<Client> displayAllClients() {
         return clientService.findAllClients();
     }
+
+
+    //postman:
+    // http://localhost:8080/client?name=Elizabeth%20Kiss
+    // http://localhost:8080/client
+    // {
+    //    "error": "Please provide an input!"
+    // }
+    @GetMapping("/client")
+    public ResponseEntity<Client> findClientByName(@RequestParam(name = "name", required = false) String name) {
+        if (name == null) {
+            throw new IllegalArgumentException();
+        }
+        String correctName = name.replace("%20", " ");
+        return ResponseEntity.ok(clientService.findByName(correctName));
+    }
 }

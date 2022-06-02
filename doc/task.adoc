@@ -74,3 +74,25 @@ https://www.w3schools.com/bootstrap4/bootstrap_forms.asp
 Login form with bootstrap (code):
 
 https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_form_basic&stacked=h
+
+Bootstrap - searchbar:
+
+https://mdbootstrap.com/docs/b4/jquery/forms/search/
+
+'''
+
+modify-default-json-error-response-from-spring-boot-rest-controller:
+
+https://stackoverflow.com/questions/29106637/modify-default-json-error-response-from-spring-boot-rest-controller
+
+https://stackoverflow.com/questions/37133362/mvc-4-return-json-as-actionresult
+
+image::image-2022-06-02-19-05-00-918.png[]
+
+image::image-2022-06-02-19-05-44-093.png[]
+
+'''
+
+spring-requestparam-vs-pathvariable:
+
+https://www.baeldung.com/spring-requestparam-vs-pathvariable
