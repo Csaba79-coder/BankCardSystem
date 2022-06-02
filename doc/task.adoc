@@ -100,3 +100,11 @@ image::image-2022-06-02-19-22-59-693.png[]
 spring-requestparam-vs-pathvariable:
 
 https://www.baeldung.com/spring-requestparam-vs-pathvariable
+
+'''
+
+Enum and its value from brackets:
+
+https://stackoverflow.com/questions/42833346/number-in-parentheses-after-enum-instance
+
+https://stackoverflow.com/questions/6667243/using-enum-values-as-string-literals
